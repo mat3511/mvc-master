@@ -43,6 +43,7 @@ class HomeController extends AControllerBase
     }
 
     public function add() {
+
         if (isset($_POST['title'])) {
             $article = new Article($_POST['title'], $_POST['header'], $_POST['text']);
             $article->save();
@@ -50,6 +51,7 @@ class HomeController extends AControllerBase
         }
         return [];
     }
+
 
     public function presmeruj() {
         header("Location: ?c=home");
